@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Corellia Travel</title>
+<link href="flightcss.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+<!--
+/*
+<body>
+</body>
+</html>
+*/
+-->
+</script>
+	<script src="http://webdev.usc.edu/jquery.js"></script>
+        <script src="lightbox/js/jquery-1.7.2.min.js"></script>
+<script src="lightbox/js/lightbox.js"></script>
+<link href="lightbox/css/lightbox.css" rel="stylesheet" />
+<script>
+   $(document).ready(function(){
+	   $("#hotel").css("visibility", "visible")
+	   $("#flights").bind('mouseover',function(){
+		   $(this).css("background-position","0px 0px")
+	   })
+	    $("#flights").bind('mouseout',function(){
+		   $(this).css("background-position","1px -50px")
+	   })
+	      $("#hotels").bind('mouseover',function(){
+		   $(this).css("background-position","-145px 0px")
+	   })
+	    $("#hotels").bind('mouseout',function(){
+		   $(this).css("background-position","-145px -50px")
+	   })
+	         $("#rentals").bind('mouseover',function(){
+		   $(this).css("background-position","-290px 0px")
+	   })
+	    $("#rentals").bind('mouseout',function(){
+		   $(this).css("background-position","-290px -50px")
+	   })
+	   });
+	   var hotelbutton = function()
+	   {document.getElementById("hotel").style.visibility="visible";
+		   document.getElementById("flight").style.visibility="hidden";
+		   document.getElementById("vehicle").style.visibility="hidden";
+	   }
+	   var flightbutton = function()
+	   {document.getElementById("flight").style.visibility="visible";
+	   document.getElementById("hotel").style.visibility="hidden";
+	   document.getElementById("vehicle").style.visibility="hidden";
+	   }
+	   var vehiclebutton = function()
+	   {document.getElementById("flight").style.visibility="hidden";
+	   document.getElementById("hotel").style.visibility="hidden";
+	   document.getElementById("vehicle").style.visibility="visible";
+	   }
+ </script>
+  <link rel="stylesheet" href="http://jqueryui.com/themes/base/jquery.ui.all.css">
+	<script src="http://jqueryui.com/jquery-1.7.2.js"></script>
+    <script src="http://jquery.com/src/jquery-latest.js"></script>
+
+	<script src="http://jqueryui.com/ui/jquery.ui.core.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.widget.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.datepicker.js"></script>
+	<link rel="stylesheet" href="http://jqueryui.com/demos/demos.css">
+    <script src="http://jqueryui.com/ui/jquery.ui.autocomplete.js"></script>
+    	<script src="http://jqueryui.com/ui/jquery.ui.position.js"></script>
+	<script src="https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js"></script>
+    <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.19.custom.css" rel="Stylesheet" />	
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.19.custom.min.js"></script>
+	<script>
+	$(document).ready(function() {
+
+		$("#save").bind("click", function() {
+
+			document.cookie = "hotelplanet = " + $("#hotelplanet").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#hotelplanet").val($.cookie("hotelplanet"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#hotelplanet").val($.cookie(""))
+
+			});
+			$("#save").bind("click", function() {
+
+			document.cookie = "nights = " + $("#nights").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#nights").val($.cookie("nights"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#nights").val($.cookie(""))
+
+			});
+			$("#save").bind("click", function() {
+
+			document.cookie = "datepicker3 = " + $("#datepicker3").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#datepicker3").val($.cookie("datepicker3"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#datepicker3").val($.cookie(""))
+
+			});
+			$("#save").bind("click", function() {
+
+			document.cookie = "rooms = " + $("#rooms").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#rooms").val($.cookie("rooms"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#rooms").val($.cookie(""))
+
+			});
+						$("#save").bind("click", function() {
+
+			document.cookie = "hoteladults = " + $("#hoteladults").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#hoteladults").val($.cookie("hoteladults"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#hoteladults").val($.cookie(""))
+
+			});
+						$("#save").bind("click", function() {
+
+			document.cookie = "hotelchildren = " + $("#hotelchildren").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#hotelchildren").val($.cookie("hotelchildren"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#hotelchildren").val($.cookie(""))
+
+			});
+	});
+	$(function() {
+		$( "#datepicker" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker2" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker3" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker4" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker5" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker6" ).datepicker();
+	});
+	$(function() {
+		var availableTags = [
+		"Coruscant",
+		"Tatooine",
+		"Hoth",
+		"Naboo",
+		"Dagobah",
+		"Bespin",
+		"Endor",
+		"Kashyyyk"
+		];
+		$( "#tags" ).autocomplete({
+			source: availableTags
+		});
+			$( "#tags2" ).autocomplete({
+			source: availableTags
+			});
+			$( "#tags3" ).autocomplete({
+			source: availableTags
+			});
+			$("#submit").bind("click", function(){
+		var planet = document.getElementById("hotelplanet").value
+		if(planet=="Coruscant")
+		{planet=100
+		}
+		if((planet=="Naboo")||(planet=="Kashyyyk"))
+		{planet=75
+		}
+		if((planet=="Tatooine")||(planet=="Bespin")||(planet=="Endor")||(planet=="Hoth")||(planet=="Dagobah"))
+		{planet=50
+		}
+		season = parseFloat(document.getElementById("datepicker3").value)
+		if((season==5)||(season==6)||(season==7)||(season==8)||(season==11)||(season==12)||(season==1))
+		{seasonmult = 1.5
+		}
+		else{seasonmult = 1}
+		
+			var rooms = parseFloat(document.getElementById("rooms").value)
+			var adults = parseFloat(document.getElementById("hoteladults").value)
+			var children = parseFloat(document.getElementById("hotelchildren").value)*0.4
+			 var totalpeople = adults + children
+			var hotelratio = rooms/totalpeople
+			 
+			 
+var nights = parseFloat(document.getElementById("nights").value)
+var costofstay = nights*planet*seasonmult*rooms
+costofstay=Math.ceil(costofstay)
+if(document.getElementById('datepicker3').value == "")
+			 {alert("Please enter a check-in date.")
+			 
+			 }
+			 else if(hotelratio<1/2.8)
+			 {alert("More rooms are needed for the specified amount of people.")
+
+			 }
+else {var w = window.open("","Invoice", "width=610,height=430")
+w.document.write("<div style='position:absolute;left:15px;width:580px;height:400px;top:15px;background-image:url(iPadBackground.png);-moz-box-shadow: 0 0 5px 5px #888;-webkit-box-shadow: 0 0 5px 5px#888;box-shadow: 0 0 5px 5px #888;-moz-border-radius: 25px 10px / 10px 25px;border-radius: 25px 10px / 10px 25px'><span style='color:#FFFFFF;font-size:24px;position:absolute;left:35px;top:5px;font-family:Verdana, Geneva, sans-serif'>THANK YOU FOR USING CORELLIA!</span><div style='position:absolute;top:40px;left:25px;width:530px;height:330px;background-color:#EEE;-moz-border-radius: 25px 10px / 10px 25px;border-radius: 25px 10px / 10px 25px;-moz-box-shadow: inset 0 0 5px 5px #888;-webkit-box-shadow: inset 0 0 5px 5px#888;box-shadow: inset 0 0 5px 5px #888;font-weight:bold'><div style='position:absolute;top:25px;left:23px;width:500px;height:400px;font-family:Verdana, Geneva, sans-serif;word-wrap: break-word'><h3>Checkout:</h3>You are about to order " + rooms + " room(s) for " + nights + " night(s) on " + document.getElementById("hotelplanet").value + ". You have indicated that " + document.getElementById("hoteladults").value + " adult(s) and " + document.getElementById("hotelchildren").value + " child/children will occupy the room. You are set to arrive on " + document.getElementById('datepicker3').value + ". <br /><br />Your total is " + costofstay + " credits. <br /><br /><input type='button' value='Checkout' /></div></div></div>")}
+	});
+	});
+
+	
+		</script>
+</head>
+
+<body>
+<div id="container">
+<div id="logo"><a href="finalhome.html"><img src="corelliaicon.gif" width="197px" height="73px" alt="logo" /></a>
+<div id="cookie">
+Have you been here before? <input id="save" type="button" value="Save Preferences" /> <input type="button" id="load" value="Reload Preferences" /> <input id="reset" type="reset" value="Reset" />
+</div>
+</div>
+<div id="menubar">
+<a href="flight.html"><div id="flights">
+</div></a>
+<a href="hotel.html"><div id="hotels">
+</div></a>
+<a href="rental.html"><div id="rentals">
+</div></a>
+</div>
+<div id="homeform"><span id="planyourtrip">PLAN YOUR HOTEL ON CORELLIA</span>
+<div id="replaceable">
+<div id="hotel">
+<h2>Hotel</h2>
+<p style="position:absolute;top:60px">Find hotels on:</p>
+<form>
+<select id="hotelplanet" style="position:absolute;top:92px;left:0px">
+<option value="Coruscant">Coruscant</option>
+<option value="Tatooine">Tatooine</option>
+<option value="Hoth">Hoth</option>
+<option value="Naboo">Naboo</option>
+<option value="Dagobah">Dagobah</option>
+<option value="Bespin">Bespin</option>
+<option value="Endor">Endor</option>
+<option value="Kashyyyk">Kashyyyk</option>
+
+</select>
+<p style="position:absolute;top:115px">Check-in:</p>
+<p style="position:absolute;top:115px;left:100px">Nights:</p>
+<input type="text" id="datepicker3" style="position:absolute;top:150px;width:80px;height:14px;left:0px" />
+<select id="nights" style="position:absolute;top:150px;width:80px;left:100px">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select>
+<p style="position:absolute;top:115px;left:210px">Rooms:</p>
+<select id="rooms" style="position:absolute;top:148px;left:210px">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select>
+<p style="position:absolute;top:180px;left:60px">Adults (18+)</p>
+<p style="position:absolute;top:180px;left:170px">Children (0-17)</p>
+<select id="hoteladults" style="position:absolute;top:212px;left:60px">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select><select id="hotelchildren" style="position:absolute;top:212px;left:170px">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select>
+<input type="button" id="submit" value="Search for hotels" style="position:absolute;top:248px" />
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="gallery2">
+<a href="hotels/coruscanthotel.jpg" rel="lightbox" title="Coruscant"><img alt="coruscant" class="galleryphotos" src="hotels/coruscanthotel.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:113px;position:absolute;top:15px;left:10px" /></a>
+<br />
+<a href="hotels/tatooinehotel.jpg" rel="lightbox" title="Tatooine"><img alt="tatooine" class="galleryphotos" src="hotels/tatooinehotel.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:100px;position:absolute;top:145px;left:10px" /></a>
+<br />
+<a href="hotels/hothhotel.jpg" rel="lightbox" title="Hoth"><img alt="hoth" class="galleryphotos" src="hotels/hothhotel.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:113px;position:absolute;top:265px;left:10px" /></a>
+<br />
+<a href="hotels/naboohotel.jpg" rel="lightbox" title="Naboo"><img alt="naboo" class="galleryphotos" src="hotels/naboohotel.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:98px;position:absolute;top:15px;left:185px" /></a>
+<br />
+<a href="hotels/dagobahhotel.jpg" rel="lightbox" title="Dagobah"><img alt="dagobah" class="galleryphotos" src="hotels/dagobahhotel.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:85px;position:absolute;top:130px;left:185px" /></a>
+<br />
+<a href="hotels/bespinhotel.jpg" rel="lightbox" title="Bespin"><img alt="bespin" class="galleryphotos" src="hotels/bespinhotel.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:67px;position:absolute;top:398px;left:10px" /></a>
+<br />
+<a href="hotels/endorhotel.jpg" rel="lightbox" title="Endor"><img alt="endor" class="galleryphotos" src="hotels/endorhotel.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:113px;position:absolute;top:235px;left:185px" /></a>
+<br />
+<a href="hotels/kashyyykhotel.jpg" rel="lightbox" title="Kashyyyk"><img alt="kashyyyk" class="galleryphotos" src="hotels/kashyyykhotel.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:113px;position:absolute;top:368px;left:185px" /></a>
+</div>
+</div>
+</body>
+</html>

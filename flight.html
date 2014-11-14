@@ -1,0 +1,670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Corellia Travel</title>
+<link href="flightcss.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+<!--
+/*
+<body>
+</body>
+</html>
+*/
+-->
+</script>
+	<script src="http://webdev.usc.edu/jquery.js"></script>
+    <script src="lightbox/js/jquery-1.7.2.min.js"></script>
+<script src="lightbox/js/lightbox.js"></script>
+<link href="lightbox/css/lightbox.css" rel="stylesheet" />
+<script>
+   $(document).ready(function(){
+	   $("#flights").bind('mouseover',function(){
+		   $(this).css("background-position","0px 0px")
+	   })
+	    $("#flights").bind('mouseout',function(){
+		   $(this).css("background-position","1px -50px")
+	   })
+	      $("#hotels").bind('mouseover',function(){
+		   $(this).css("background-position","-145px 0px")
+	   })
+	    $("#hotels").bind('mouseout',function(){
+		   $(this).css("background-position","-145px -50px")
+	   })
+	         $("#rentals").bind('mouseover',function(){
+		   $(this).css("background-position","-290px 0px")
+	   })
+	    $("#rentals").bind('mouseout',function(){
+		   $(this).css("background-position","-290px -50px")
+	   })
+	   });
+	   var hotelbutton = function()
+	   {document.getElementById("hotel").style.visibility="visible";
+		   document.getElementById("flight").style.visibility="hidden";
+		   document.getElementById("vehicle").style.visibility="hidden";
+	   }
+	   var flightbutton = function()
+	   {document.getElementById("flight").style.visibility="visible";
+	   document.getElementById("hotel").style.visibility="hidden";
+	   document.getElementById("vehicle").style.visibility="hidden";
+	   }
+	   var vehiclebutton = function()
+	   {document.getElementById("flight").style.visibility="hidden";
+	   document.getElementById("hotel").style.visibility="hidden";
+	   document.getElementById("vehicle").style.visibility="visible";
+	   }
+ </script>
+ <link rel="stylesheet" href="http://jqueryui.com/themes/base/jquery.ui.all.css">
+	<script src="http://jqueryui.com/jquery-1.7.2.js"></script>
+    <script src="http://jquery.com/src/jquery-latest.js"></script>
+
+	<script src="http://jqueryui.com/ui/jquery.ui.core.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.widget.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.datepicker.js"></script>
+	<link rel="stylesheet" href="http://jqueryui.com/demos/demos.css">
+    <script src="http://jqueryui.com/ui/jquery.ui.autocomplete.js"></script>
+    	<script src="http://jqueryui.com/ui/jquery.ui.position.js"></script>
+	<script src="https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js"></script>
+    <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.19.custom.css" rel="Stylesheet" />	
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.19.custom.min.js"></script>
+<script>
+
+	$(document).ready(function() {
+
+		$("#save").bind("click", function() {
+
+			document.cookie = "tags = " + $("#tags").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#tags").val($.cookie("tags"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#tags").val($.cookie(""))
+
+			});
+					$("#save").bind("click", function() {
+
+			document.cookie = "tags2 = " + $("#tags2").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#tags2").val($.cookie("tags2"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#tags2").val($.cookie(""))
+
+			});
+								$("#save").bind("click", function() {
+
+			document.cookie = "datepicker = " + $("#datepicker").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#datepicker").val($.cookie("datepicker"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#datepicker").val($.cookie(""))
+
+			});
+											$("#save").bind("click", function() {
+
+			document.cookie = "datepicker2 = " + $("#datepicker2").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#datepicker2").val($.cookie("datepicker2"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#datepicker2").val($.cookie(""))
+
+			});
+			
+														$("#save").bind("click", function() {
+
+			document.cookie = "adultflight = " + $("#adultflight").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#adultflight").val($.cookie("adultflight"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#adultflight").val($.cookie(""))
+
+			});
+											$("#save").bind("click", function() {
+
+			document.cookie = "seniorsflight = " + $("#seniorsflight").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#seniorsflight").val($.cookie("seniorsflight"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#seniorsflight").val($.cookie(""))
+
+			});
+			
+														$("#save").bind("click", function() {
+
+			document.cookie = "childrenflight = " + $("#childrenflight").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#childrenflight").val($.cookie("childrenflight"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#childrenflight").val($.cookie(""))
+
+			});
+			
+														$("#save").bind("click", function() {
+
+			document.cookie = "flighttime = " + $("#flighttime").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#flighttime").val($.cookie("flighttime"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#flighttime").val($.cookie(""))
+
+			});
+			
+														$("#save").bind("click", function() {
+			document.cookie = "flighttime2 = " + $("#flighttime2").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#flighttime2").val($.cookie("flighttime2"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#flighttime2").val($.cookie(""))
+
+			});
+			
+			$("#oneway").bind("click", function() {
+			document.getElementById('oneway').value=2
+					document.getElementById('roundtrip').value=0
+
+			});
+			$("#save").bind("click", function() {
+			document.cookie = "oneway = " + $("#oneway").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#oneway").val($.cookie("oneway"))
+
+if(document.getElementById('oneway').value==2)
+{document.getElementById('oneway').checked=true
+}
+		});
+		
+		$("#roundtrip").bind("click", function() {
+						document.getElementById('roundtrip').value=2
+			document.getElementById('oneway').value=0
+
+			});
+					$("#save").bind("click", function() {
+			document.cookie = "roundtrip = " + $("#roundtrip").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#roundtrip").val($.cookie("roundtrip"))
+
+if(document.getElementById('roundtrip').value==2)
+{document.getElementById('roundtrip').checked=true
+document.getElementById('roundtripinfo').style.visibility="visible"
+}
+		});
+$("#reset").bind("click",function() {
+	document.getElementById('roundtrip').checked=true
+	document.getElementById('roundtripinfo').style.visibility="visible"
+});
+	$("#load").bind("click", function() {
+if(document.getElementById('oneway').checked==true)
+{document.getElementById('roundtripinfo').style.visibility="hidden"}});
+	$("#roundtrip").bind("click", function() {document.getElementById('roundtripinfo').style.visibility="visible"});
+$("#oneway").bind("click", function() {document.getElementById('roundtripinfo').style.visibility="hidden"});
+	});
+
+	</script>
+
+	<script>
+	$(function() {
+		$( "#datepicker" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker2" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker3" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker4" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker5" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker6" ).datepicker();
+	});
+		$(function() {
+		var availableTags = [
+		"Coruscant",
+		"Tatooine",
+		"Hoth",
+		"Naboo",
+		"Dagobah",
+		"Bespin",
+		"Endor",
+		"Kashyyyk"
+		];
+		$( "#tags" ).autocomplete({
+			source: availableTags
+		});
+			$( "#tags2" ).autocomplete({
+			source: availableTags
+			});
+	});
+	</script>
+    <script type="text/javascript">
+$(document).ready(function(){
+	$("#submit").bind("click", function(){
+		if(document.getElementById("roundtrip").checked==true)
+		{triptype=1.75
+		}
+		if(document.getElementById("oneway").checked==true)
+		{triptype=1
+		}
+		var season = parseFloat(document.getElementById("datepicker").value)
+		if((season==5)||(season==6)||(season==7)||(season==8)||(season==11)||(season==12)||(season==1))
+		{var seasonmult = 1.2
+		}
+		else{seasonmult = 1}
+		
+		var season2 = parseFloat(document.getElementById("datepicker2").value)
+		if((season2==9)||(season2==10)||(season2==2)||(season2==3)||(season2==4))
+		{var seasonmult2 = 1
+		}
+		if((season2==5)||(season2==6)||(season2==7)||(season2==8)||(season2==11)||(season2==12)||(season2==1))
+		{seasonmult2 = 1.2
+		}
+		else {seasonmult2=1}		
+		var departuretime = document.getElementById("flighttime").value
+		if((departuretime == "12AM")||(departuretime == "1AM")||(departuretime == "2AM")||(departuretime == "3AM")||(departuretime == "4AM"))
+		{departuretime=0.8
+		}
+		else{departuretime=1}
+		var returntime = document.getElementById("flighttime2").value
+		if((returntime == "12AM")||(returntime == "1AM")||(returntime == "2AM")||(returntime == "3AM")||(returntime == "4AM"))
+		{returntime=0.8
+		}
+		else(returntime=1)
+		var departport = document.getElementById("tags").value.toUpperCase()
+				if(departport=="CORUSCANT")
+				{departport=0
+				}
+				else if((departport=="NABOO")||(departport=="KASHYYYK"))
+				{departport=900
+				}
+				else if((departport=="ENDOR")||(departport=="HOTH")||(departport=="BESPIN")||(departport=="TATOOINE")||(departport=="DAGOBAH"))
+				{departport=1500
+				}
+				else {alert("Not a valid departure.")}
+	var arriveport = document.getElementById("tags2").value.toUpperCase()
+				if(arriveport=="CORUSCANT")
+				{arriveport=100
+				}
+				else if((arriveport=="NABOO")||(arriveport=="KASHYYYK"))
+				{arriveport=800
+				}
+				else if((arriveport=="ENDOR")||(arriveport=="HOTH")||(arriveport=="BESPIN")||(arriveport=="TATOOINE")||(arriveport=="DAGOBAH"))
+				{arriveport=1200
+				}
+				else {alert("Not a valid destination.")}
+				var adultnum = parseFloat(document.getElementById("adultflight").value)
+				var seniornum = parseFloat(document.getElementById("seniorsflight").value)
+				seniornum = seniornum*0.80
+				var childrennum = parseFloat(document.getElementById("childrenflight").value)
+				childrennum = childrennum*0.60
+				costoftravel = Math.abs(departport-arriveport)*triptype*adultnum*departuretime*returntime*seasonmult*seasonmult2+Math.abs(departport-arriveport)*triptype*seniornum*departuretime*returntime*seasonmult*seasonmult2+Math.abs(departport-arriveport)*triptype*childrennum*departuretime*returntime*seasonmult*seasonmult2
+			costoftravel = Math.ceil(costoftravel)
+			if(document.getElementById("roundtrip").checked==true){
+			if((document.getElementById("tags").value=="")||(document.getElementById("tags2").value=="")||(document.getElementById("datepicker").value=="")||(document.getElementById("datepicker2").value=="")||(document.getElementById("flighttime").value=="")||(document.getElementById("flighttime2").value==""))
+			{alert("Please enter values in all inputs.")
+			
+			}
+			else if((adultnum==0)&&(seniornum==0)&&(childrennum==0))
+			{alert("Please indicate the number of travelers.")
+			}
+			else {var w = window.open("","Invoice", "width=610,height=430")
+w.document.write("<div style='position:absolute;left:15px;width:580px;height:400px;top:15px;background-image:url(iPadBackground.png);-moz-box-shadow: 0 0 5px 5px #888;-webkit-box-shadow: 0 0 5px 5px#888;box-shadow: 0 0 5px 5px #888;-moz-border-radius: 25px 10px / 10px 25px;border-radius: 25px 10px / 10px 25px'><span style='color:#FFFFFF;font-size:24px;position:absolute;left:35px;top:5px;font-family:Verdana, Geneva, sans-serif'>THANK YOU FOR USING CORELLIA!</span><div style='position:absolute;top:40px;left:25px;width:530px;height:330px;background-color:#EEE;-moz-border-radius: 25px 10px / 10px 25px;border-radius: 25px 10px / 10px 25px;-moz-box-shadow: inset 0 0 5px 5px #888;-webkit-box-shadow: inset 0 0 5px 5px#888;box-shadow: inset 0 0 5px 5px #888;font-weight:bold'><div style='position:absolute;top:25px;left:23px;width:500px;height:400px;font-family:Verdana, Geneva, sans-serif;word-wrap: break-word'><h3>Checkout:</h3>You are about to order " + document.getElementById("adultflight").value + " adult ticket(s), " + document.getElementById("seniorsflight").value + " senior ticket(s), and " + document.getElementById("childrenflight").value + " child ticket(s). The tickets are roundtrip tickets. You will leave from " + document.getElementById("tags").value + " on " + document.getElementById("datepicker").value + " at " + document.getElementById('flighttime').value + ". Your destination will be " + document.getElementById("tags2").value + ". You will return on " + document.getElementById("tags2").value + " at " + document.getElementById("flighttime2").value + ". Please arrive early to check in.<br /><br />Your total is " + costoftravel + " credits. <br /><br /><input type='button' value='Checkout' /></div></div></div>")
+			}}
+			if(document.getElementById("oneway").checked==true)
+			{if((document.getElementById("tags").value=="")||(document.getElementById("tags2").value=="")||(document.getElementById("datepicker").value=="")||(document.getElementById("flighttime").value==""))
+			{alert("Please enter values in all inputs.")
+			}
+				else if((adultnum==0)&&(seniornum==0)&&(childrennum==0))
+			{alert("Please indicate the number of travelers.")
+			}
+				else {var z = window.open("","Invoice", "width=610,height=430")
+z.document.write("<div style='position:absolute;left:15px;width:580px;height:400px;top:15px;background-image:url(iPadBackground.png);-moz-box-shadow: 0 0 5px 5px #888;-webkit-box-shadow: 0 0 5px 5px#888;box-shadow: 0 0 5px 5px #888;-moz-border-radius: 25px 10px / 10px 25px;border-radius: 25px 10px / 10px 25px'><span style='color:#FFFFFF;font-size:24px;position:absolute;left:35px;top:5px;font-family:Verdana, Geneva, sans-serif'>THANK YOU FOR USING CORELLIA!</span><div style='position:absolute;top:40px;left:25px;width:530px;height:330px;background-color:#EEE;-moz-border-radius: 25px 10px / 10px 25px;border-radius: 25px 10px / 10px 25px;-moz-box-shadow: inset 0 0 5px 5px #888;-webkit-box-shadow: inset 0 0 5px 5px#888;box-shadow: inset 0 0 5px 5px #888;font-weight:bold'><div style='position:absolute;top:25px;left:23px;width:500px;height:400px;font-family:Verdana, Geneva, sans-serif;word-wrap: break-word'><h3>Checkout:</h3>You are about to order " + document.getElementById("adultflight").value + " adult ticket(s), " + document.getElementById("seniorsflight").value + " senior ticket(s), and " + document.getElementById("childrenflight").value + " child ticket(s). The tickets are one-way tickets. You will leave from " + document.getElementById("tags").value + " on " + document.getElementById("datepicker").value + " at " + document.getElementById('flighttime').value + ". Your destination will be " + document.getElementById("tags2").value + ". Please arrive early to check in.<br /><br />Your total is " + costoftravel + " credits. <br /><br /><input type='button' value='Checkout' /></div></div></div>")}
+			}
+			
+
+	});
+});
+	</script>
+</head>
+
+<body>
+<div id="container">
+<div id="logo"><a href="finalhome.html"><img src="corelliaicon.gif" width="197px" height="73px" alt="logo" /></a>
+<div id="cookie">
+Have you been here before? <input id="save" type="button" value="Save Preferences" /> <input type="button" id="load" value="Reload Preferences" /> <input id="reset" type="reset" value="Reset" />
+
+</div>
+</div>
+<div id="menubar">
+<a href="flight.html"><div id="flights">
+</div></a>
+<a href="hotel.html"><div id="hotels">
+</div></a>
+<a href="rental.html"><div id="rentals">
+</div></a>
+</div>
+<div id="homeform"><span id="planyourtrip">PLAN YOUR FLIGHT ON CORELLIA</span>
+<div id="replaceable">
+<div id="flight">
+<h2>Flight
+</h2>
+<form>
+<input type="radio" name="text" id="roundtrip" checked="yes" value="2" />  Roundtrip
+<input id="oneway" style="margin-left:40px" type="radio" name="text" value="0" /> One way <br />
+<p style="position:absolute;top:80px">Leaving from:</p><br />
+<div style="position:absolute;top:115px;width:280px;height:14px" class="ui-widget">
+	<input name="from" value="Coruscant" id="tags" />
+</div>
+<p style="position:absolute;top:80px;left:240px">Departing:</p><br />
+<input type="text" name="departuredate" id="datepicker" style="position:absolute;top:115px;width:80px;height:14px;left:240px" />
+<p style="position:absolute;top:80px;left:400px">Time:</p><br />
+<select name="departuretime" id="flighttime" style="position:absolute;top:114px;left:399px">
+<option value=""></option>
+<option value="12AM">								12 AM							
+</option>
+<option value="1AM">								1 AM							
+</option>
+<option value="2AM">								2 AM							
+</option>
+<option value="3AM">								3 AM							
+</option>
+<option value="4AM">								4 AM							
+</option>
+<option value="5AM">								5 AM							
+</option>
+<option value="6AM">								6 AM							
+</option>
+<option value="7AM">								7 AM							
+</option>
+<option value="8AM">								8 AM							
+</option>
+<option value="9AM">								9 AM							
+</option>
+<option value="10AM">								10 AM							
+</option>
+<option value="11AM">								11 AM							
+</option>
+<option value="12PM">								12 PM							
+</option>
+<option value="1PM">								1 PM							
+</option>
+<option value="2PM">								2 PM							
+</option>
+<option value="3PM">								3 PM							
+</option>
+<option value="4PM">								4 PM							
+</option>
+<option value="5PM">								5 PM							
+</option>
+<option value="6PM">								6 PM							
+</option>
+<option value="7PM">								7 PM							
+</option>
+<option value="8PM">								8 PM							
+</option>
+<option value="9PM">								9 PM							
+</option>
+<option value="10PM">								10 PM							
+</option>
+<option value="11PM">								11 PM							
+</option>
+</select>
+<p style="position:absolute;top:130px">Going to:</p><br />
+<div style="position:absolute;top:160px;width:280px;height:14px" class="ui-widget">
+	<input name="to" value="Naboo" id="tags2" />
+</div>
+<div id="roundtripinfo">
+
+<p style="position:absolute;top:130px;left:240px">Returning:</p><br />
+<input type="text" name="returningdate" id="datepicker2" style="position:absolute;top:161px;width:80px;height:14px;left:240px" />
+<p style="position:absolute;top:130px;left:400px">Time:</p><br />
+<select id="flighttime2" name="returningtime" style="position:absolute;top:159px;left:399px">
+<option value=""></option>
+
+<option value="12AM">								12 AM							
+</option>
+<option value="1AM">								1 AM							
+</option>
+<option value="2AM">								2 AM							
+</option>
+<option value="3AM">								3 AM							
+</option>
+<option value="4AM">								4 AM							
+</option>
+<option value="5AM">								5 AM							
+</option>
+<option value="6AM">								6 AM							
+</option>
+<option value="7AM">								7 AM							
+</option>
+<option value="8AM">								8 AM							
+</option>
+<option value="9AM">								9 AM							
+</option>
+<option value="10AM">								10 AM							
+</option>
+<option value="11AM">								11 AM							
+</option>
+<option value="12PM">								12 PM							
+</option>
+<option value="1PM">								1 PM							
+</option>
+<option value="2PM">								2 PM							
+</option>
+<option value="3PM">								3 PM							
+</option>
+<option value="4PM">								4 PM							
+</option>
+<option value="5PM">								5 PM							
+</option>
+<option value="6PM">								6 PM							
+</option>
+<option value="7PM">								7 PM							
+</option>
+<option value="8PM">								8 PM							
+</option>
+<option value="9PM">								9 PM							
+</option>
+<option value="10PM">								10 PM							
+</option>
+<option value="11PM">								11 PM							
+</option>
+</select>
+</div>
+<p style="position:absolute;top:175px">Adults (18-64)</p>
+<select id="adultflight" name="adults" style="position:absolute;top:203px">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+
+</select>
+<p style="position:absolute;top:175px;left:120px">Seniors (65+)</p>
+<select id="seniorsflight" name="seniors" style="position:absolute;top:203px;left:120px">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+
+</select>
+<p style="position:absolute;top:175px;left:248px">Children (0-17)</p>
+<select id="childrenflight" name="children" style="position:absolute;top:203px;left:248px">
+<option value="0">0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+
+</select>
+<input type="button" id="submit" value="Search for flights" style="position:absolute;top:238px" />
+</form>
+
+</div>
+</div>
+</div>
+<div id="gallery3">
+<a href="planets/coruscant.jpg" rel="lightbox" title="Coruscant"><img alt="coruscant" class="galleryphotos" src="planets/coruscant.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:150px;position:absolute;top:15px;left:10px" /></a>
+<br />
+<a href="planets/tatooine.jpg" rel="lightbox" title="Tatooine"><img alt="tatooine" class="galleryphotos" src="planets/tatooine.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:138px;position:absolute;top:180px;left:10px" /></a>
+<br />
+<a href="planets/hoth.jpg" rel="lightbox" title="Hoth"><img alt="hoth" class="galleryphotos" src="planets/hoth.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:150px;position:absolute;top:15px;left:350px" /></a>
+<br />
+<a href="planets/naboo.jpg" rel="lightbox" title="Naboo"><img alt="naboo" class="galleryphotos" src="planets/naboo.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:150px;position:absolute;top:15px;left:180px" /></a>
+<br />
+<a href="planets/dagobah.jpg" rel="lightbox" title="Dagobah"><img alt="dagobah" class="galleryphotos" src="planets/dagobah.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:150px;position:absolute;top:333px;left:10px" /></a>
+<br />
+<a href="planets/bespin.jpg" rel="lightbox" title="Bespin"><img alt="bespin" class="galleryphotos" src="planets/bespin.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:87px;position:absolute;top:180px;left:350px" /></a>
+<br />
+<a href="planets/endor.jpg" rel="lightbox" title="Endor"><img alt="endor" class="galleryphotos" src="planets/endor.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:150px;position:absolute;top:180px;left:180px" /></a>
+<br />
+<a href="planets/kashyyyk.jpg" rel="lightbox" title="Kashyyyk"><img alt="kashyyyk" class="galleryphotos" src="planets/kashyyyk.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:120px;position:absolute;top:345px;left:180px" /></a>
+</div>
+</div>
+</body>
+</html>

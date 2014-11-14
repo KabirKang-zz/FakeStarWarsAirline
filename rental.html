@@ -1,0 +1,483 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Corellia Travel</title>
+<link href="flightcss.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+<!--
+/*
+<body>
+</body>
+</html>
+*/
+-->
+</script>
+	<script src="http://webdev.usc.edu/jquery.js"></script>
+    <script src="lightbox/js/jquery-1.7.2.min.js"></script>
+<script src="lightbox/js/lightbox.js"></script>
+<link href="lightbox/css/lightbox.css" rel="stylesheet" />
+<script>
+   $(document).ready(function(){
+	   $("#vehicle").css("visibility","visible")
+	   $("#flights").bind('mouseover',function(){
+		   $(this).css("background-position","0px 0px")
+	   })
+	    $("#flights").bind('mouseout',function(){
+		   $(this).css("background-position","1px -50px")
+	   })
+	      $("#hotels").bind('mouseover',function(){
+		   $(this).css("background-position","-145px 0px")
+	   })
+	    $("#hotels").bind('mouseout',function(){
+		   $(this).css("background-position","-145px -50px")
+	   })
+	         $("#rentals").bind('mouseover',function(){
+		   $(this).css("background-position","-290px 0px")
+	   })
+	    $("#rentals").bind('mouseout',function(){
+		   $(this).css("background-position","-290px -50px")
+	   })
+	   });
+	   var hotelbutton = function()
+	   {document.getElementById("hotel").style.visibility="visible";
+		   document.getElementById("flight").style.visibility="hidden";
+		   document.getElementById("vehicle").style.visibility="hidden";
+	   }
+	   var flightbutton = function()
+	   {document.getElementById("flight").style.visibility="visible";
+	   document.getElementById("hotel").style.visibility="hidden";
+	   document.getElementById("vehicle").style.visibility="hidden";
+	   }
+	   var vehiclebutton = function()
+	   {document.getElementById("flight").style.visibility="hidden";
+	   document.getElementById("hotel").style.visibility="hidden";
+	   document.getElementById("vehicle").style.visibility="visible";
+	   }
+ </script>
+ <link rel="stylesheet" href="http://jqueryui.com/themes/base/jquery.ui.all.css">
+	<script src="http://jqueryui.com/jquery-1.7.2.js"></script>
+    <script src="http://jquery.com/src/jquery-latest.js"></script>
+
+	<script src="http://jqueryui.com/ui/jquery.ui.core.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.widget.js"></script>
+	<script src="http://jqueryui.com/ui/jquery.ui.datepicker.js"></script>
+	<link rel="stylesheet" href="http://jqueryui.com/demos/demos.css">
+    <script src="http://jqueryui.com/ui/jquery.ui.autocomplete.js"></script>
+    	<script src="http://jqueryui.com/ui/jquery.ui.position.js"></script>
+	<script src="https://raw.github.com/carhartl/jquery-cookie/master/jquery.cookie.js"></script>
+    <link type="text/css" href="css/ui-lightness/jquery-ui-1.8.19.custom.css" rel="Stylesheet" />	
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.19.custom.min.js"></script>
+	<script>
+	$(document).ready(function() {
+
+		$("#save").bind("click", function() {
+
+			document.cookie = "datepicker5 = " + $("#datepicker5").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#datepicker5").val($.cookie("datepicker5"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#datepicker5").val($.cookie(""))
+
+			});
+					$("#save").bind("click", function() {
+
+			document.cookie = "pickuptime = " + $("#pickuptime").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#pickuptime").val($.cookie("pickuptime"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#pickuptime").val($.cookie(""))
+
+			});
+					$("#save").bind("click", function() {
+
+			document.cookie = "duration = " + $("#duration").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#duration").val($.cookie("duration"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#duration").val($.cookie(""))
+
+			});
+			$("#save").bind("click", function() {
+
+			document.cookie = "dropofftime = " + $("#dropofftime").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#dropofftime").val($.cookie("dropofftime"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#dropofftime").val($.cookie(""))
+
+			});
+			$("#save").bind("click", function() {
+
+			document.cookie = "vehicletype = " + $("#vehicletype").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#vehicletype").val($.cookie("vehicletype"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#vehicletype").val($.cookie(""))
+
+			});
+			$("#save").bind("click", function() {
+
+			document.cookie = "tags3 = " + $("#tags3").val()
+
+		});
+
+
+
+		$("#load").bind("click",function() {
+
+			$("#tags3").val($.cookie("tags3"))
+
+
+		});
+
+		
+
+			$("#reset").bind("click",function() {
+
+				$("#tags3").val($.cookie(""))
+
+			});
+	});
+	$(function() {
+		$( "#datepicker" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker2" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker3" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker4" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker5" ).datepicker();
+	});
+	$(function() {
+		$( "#datepicker6" ).datepicker();
+	});
+	$(function() {
+		var availableTags = [
+		"Coruscant",
+		"Tatooine",
+		"Hoth",
+		"Naboo",
+		"Dagobah",
+		"Bespin",
+		"Endor",
+		"Kashyyyk"
+		];
+		$( "#tags" ).autocomplete({
+			source: availableTags
+		});
+			$( "#tags2" ).autocomplete({
+			source: availableTags
+			});
+			$( "#tags3" ).autocomplete({
+			source: availableTags
+			});
+			$("#submit").bind("click", function(){
+			season = parseFloat(document.getElementById("datepicker5").value)
+		if((season==5)||(season==6)||(season==7)||(season==8)||(season==11)||(season==12)||(season==1))
+		{var seasonmult = 1.5
+		}
+		else{seasonmult = 1}
+var duration = document.getElementById("duration").value
+if(duration=="1 day")
+{duration = 50
+}
+if(duration == "3 days")
+{duration = 120
+}
+if(duration == "7 days")
+{duration=300
+}
+if(duration == "14 days")
+{duration=500
+}
+if(duration == "30 days")
+{duration = 1000
+}
+var vehicle = document.getElementById("vehicletype").value
+if(vehicle=="Landspeeder")
+{vehicle=1
+}
+if(vehicle=="Snowspeeder")
+{vehicle=1.5
+}
+if(vehicle=="Speederbike")
+{vehicle=0.75
+}
+if(vehicle=="Walker")
+{vehicle=2
+}
+if(vehicle=="Starship")
+{vehicle=5
+}
+
+var planet = document.getElementById("tags3").value.toUpperCase()
+				if(planet=="CORUSCANT")
+				{planet=2
+				}
+			else if((planet=="NABOO")||(planet=="KASHYYYK"))
+				{planet=1.5
+				}
+			 else if((planet=="ENDOR")||(planet=="HOTH")||(planet=="BESPIN")||(planet=="TATOOINE")||(planet=="DAGOBAH"))
+				{planet=1
+				}
+			else {alert("Not a valid planet.")}
+			
+			var costofrental = Math.ceil(duration*planet*vehicle*seasonmult)
+if((document.getElementById('datepicker5').value == "")||(document.getElementById('pickuptime').value == "")||(document.getElementById('dropofftime').value == ""))
+{alert("Please enter a valid value in all fields.")
+}
+else{var w = window.open("","Invoice", "width=610,height=430")
+w.document.write("<div style='position:absolute;left:15px;width:580px;height:400px;top:15px;background-image:url(iPadBackground.png);-moz-box-shadow: 0 0 5px 5px #888;-webkit-box-shadow: 0 0 5px 5px#888;box-shadow: 0 0 5px 5px #888;-moz-border-radius: 25px 10px / 10px 25px;border-radius: 25px 10px / 10px 25px'><span style='color:#FFFFFF;font-size:24px;position:absolute;left:35px;top:5px;font-family:Verdana, Geneva, sans-serif'>THANK YOU FOR USING CORELLIA!</span><div style='position:absolute;top:40px;left:25px;width:530px;height:330px;background-color:#EEE;-moz-border-radius: 25px 10px / 10px 25px;border-radius: 25px 10px / 10px 25px;-moz-box-shadow: inset 0 0 5px 5px #888;-webkit-box-shadow: inset 0 0 5px 5px#888;box-shadow: inset 0 0 5px 5px #888;font-weight:bold'><div style='position:absolute;top:25px;left:23px;width:500px;height:400px;font-family:Verdana, Geneva, sans-serif;word-wrap: break-word'><h3>Checkout:</h3>You are about to order a " + document.getElementById('vehicletype').value + " for " + document.getElementById('duration').value + " on " + document.getElementById("tags3").value + ". You have indicated that you will pick it up on " + document.getElementById("datepicker5").value + " at " + document.getElementById("pickuptime").value + ". Please drop it off at " + document.getElementById('dropofftime').value + " as you have indicated. <br /><br />Your total is " + costofrental + " credits. <br /><br /><input type='button' value='Checkout' /></div></div></div>")
+}
+		
+		
+
+			});
+
+	});
+	
+	</script>
+</head>
+
+<body>
+<div id="container">
+<div id="logo"><a href="finalhome.html"><img src="corelliaicon.gif" width="197px" height="73px" alt="logo" /></a>
+<div id="cookie">
+Have you been here before? <input id="save" type="button" value="Save Preferences" /> <input type="button" id="load" value="Reload Preferences" /> <input id="reset" type="reset" value="Reset" />
+</div>
+</div>
+<div id="menubar">
+<a href="flight.html"><div id="flights">
+</div></a>
+<a href="hotel.html"><div id="hotels">
+</div></a>
+<a href="#"><div id="rentals">
+</div></a>
+</div>
+<div id="homeform"><span id="planyourtrip">PLAN YOUR RENTAL ON CORELLIA</span>
+<div id="replaceable">
+<div id="vehicle">
+<h2>Vehicle
+</h2>
+<p style="position:absolute;top:60px">Find vehicle rentals on:</p>
+<p style="position:absolute;top:85px">Pick-up:</p>
+<p style="position:absolute;top:85px;left:130px">Time:</p>
+<input type="text" id="datepicker5" style="position:absolute;top:120px;width:80px;height:14px;left:0px" />
+<select id="pickuptime" style="position:absolute;top:120px;left:129px">
+<option value=""></option>
+<option value="12AM">								12 AM							
+</option>
+<option value="1AM">								1 AM							
+</option>
+<option value="2AM">								2 AM							
+</option>
+<option value="3AM">								3 AM							
+</option>
+<option value="4AM">								4 AM							
+</option>
+<option value="5AM">								5 AM							
+</option>
+<option value="6AM">								6 AM							
+</option>
+<option value="7AM">								7 AM							
+</option>
+<option value="8AM">								8 AM							
+</option>
+<option value="9AM">								9 AM							
+</option>
+<option value="10AM">								10 AM							
+</option>
+<option value="11AM">								11 AM							
+</option>
+<option value="12PM">								12 PM							
+</option>
+<option value="1PM">								1 PM							
+</option>
+<option value="2PM">								2 PM							
+</option>
+<option value="3PM">								3 PM							
+</option>
+<option value="4PM">								4 PM							
+</option>
+<option value="5PM">								5 PM							
+</option>
+<option value="6PM">								6 PM							
+</option>
+<option value="7PM">								7 PM							
+</option>
+<option value="8PM">								8 PM							
+</option>
+<option value="9PM">								9 PM							
+</option>
+<option value="10PM">								10 PM							
+</option>
+<option value="11PM">								11 PM							
+</option>
+</select>
+<p style="position:absolute;top:85px;left:250px">Duration:</p>
+<p style="position:absolute;top:85px;left:380px">Time:</p>
+<select id="duration" style="position:absolute;top:120px;width:80px;left:250px">
+<option value="1 day">1 day</option>
+<option value="3 days">3 days</option>
+<option value="7 days">7 days
+</option>
+<option value="14 days">14 days</option>
+<option value="30 days">30 days</option>
+</select>
+<select id="dropofftime" style="position:absolute;top:120px;left:379px">
+<option value=""></option>
+<option value="12AM">								12 AM							
+</option>
+<option value="1AM">								1 AM							
+</option>
+<option value="2AM">								2 AM							
+</option>
+<option value="3AM">								3 AM							
+</option>
+<option value="4AM">								4 AM							
+</option>
+<option value="5AM">								5 AM							
+</option>
+<option value="6AM">								6 AM							
+</option>
+<option value="7AM">								7 AM							
+</option>
+<option value="8AM">								8 AM							
+</option>
+<option value="9AM">								9 AM							
+</option>
+<option value="10AM">								10 AM							
+</option>
+<option value="11AM">								11 AM							
+</option>
+<option value="12PM">								12 PM							
+</option>
+<option value="1PM">								1 PM							
+</option>
+<option value="2PM">								2 PM							
+</option>
+<option value="3PM">								3 PM							
+</option>
+<option value="4PM">								4 PM							
+</option>
+<option value="5PM">								5 PM							
+</option>
+<option value="6PM">								6 PM							
+</option>
+<option value="7PM">								7 PM							
+</option>
+<option value="8PM">								8 PM							
+</option>
+<option value="9PM">								9 PM							
+</option>
+<option value="10PM">								10 PM							
+</option>
+<option value="11PM">								11 PM							
+</option>
+</select>
+<p style="position:absolute;top:145px">Vehicle type:</p>
+<select id="vehicletype" style="position:absolute;top:180px;left:0px">
+<option>Landspeeder</option>
+<option>Snowspeeder</option>
+<option>Speeder bike</option>
+<option>Walker</option>
+<option>Starship</option>
+</select>
+<input type="button" id="submit" value="Search for vehicles" style="position:absolute;top:220px;left:0px" />
+<p style="position:absolute;top:145px;left:160px">Planet of pick-up:</p>
+<div style="position:absolute;top:180px;width:280px;height:14px;left:160px" class="ui-widget">
+	<input value="Coruscant" id="tags3" />
+</div>
+</div>
+</div>
+</div><div id="gallery">
+<a href="sw/speeder.gif" rel="lightbox" title="Landspeeder"><img alt="speeder" class="galleryphotos" src="sw/speeder.gif" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:57px;position:absolute;top:20px;left:10px" /></a>
+<br />
+<a href="sw/snowspeeder.gif" rel="lightbox" title="Snowspeeder"><img alt="snowspeeder" class="galleryphotos" src="sw/snowspeeder.gif" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:72px;position:absolute;top:95px;left:10px" /></a>
+<br />
+<a href="sw/speederbike.gif" rel="lightbox" title="Speeder bike"><img alt="speederbike" class="galleryphotos" src="sw/speederbike.gif" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:178px;position:absolute;top:185px;left:10px" /></a>
+<br />
+<a href="sw/atstwalker.jpg" rel="lightbox" title="Walker"><img alt="walker" class="galleryphotos" src="sw/atstwalker.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:206px;position:absolute;top:20px;left:180px" /></a>
+<br />
+<a href="sw/millenniumfalcon.jpg" rel="lightbox" title="Starship"><img alt="starship" class="galleryphotos" src="sw/millenniumfalcon.jpg" style="-moz-border-radius: 25px 10px / 10px 25px;
+border-radius: 25px 10px / 10px 25px;width:150px;height:95px;position:absolute;top:250px;left:180px" /></a>
+</div>
+</div>
+</body>
+</html>
